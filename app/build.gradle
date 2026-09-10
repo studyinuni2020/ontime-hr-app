@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.ontimehr.app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.ontimehr.app"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        // Paste your deployed Google Apps Script Web App URL between the quotes below.
+        buildConfigField "String", "WEB_APP_URL", "\"https://script.google.com/macros/s/AKfycbz-fqbKd9ua78aAvtWdkgxKNFN5ChZKwJbuFQK6nM16uf-743w_y1WyXF86AiywKnfG/exec\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.webkit:webkit:1.10.0'
+    implementation 'androidx.activity:activity-ktx:1.8.2'
+}

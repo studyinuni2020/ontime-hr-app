@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.OnTimeHR" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#1478FF</item>
+        <item name="android:navigationBarColor">#061C3D</item>
+        <item name="android:statusBarColor">#061C3D</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>
